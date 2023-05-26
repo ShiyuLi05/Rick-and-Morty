@@ -89,6 +89,7 @@ nav ul li a:hover {
   cursor: default;
   transition: 0.1s ease-in-out;
   font-size: 1.6rem;
+  overflow: hidden;
 }
 
 .card:hover {

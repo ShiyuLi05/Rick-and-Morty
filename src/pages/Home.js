@@ -63,7 +63,7 @@ function Home() {
       <div className='flex'>
         <h2>Characters</h2>
         <div className='buttons'>
-        {isSortedByName ? <button onClick={sortByName} className='sort'>Sort by Name</button> : <button onClick={sortById} className='sort'>Sort by <br/>ID</button>}
+        {isSortedByName ? <button onClick={sortByName} className='sort'>Sort by Name</button> : <button onClick={sortById} className='sort'>Sort by ID</button>}
         <button className='add'><Link to= '/add'>New Character</Link></button>
         </div>
       </div>

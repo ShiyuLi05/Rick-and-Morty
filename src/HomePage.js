@@ -13,9 +13,9 @@ function HomePage() {
         <main>
         <div className='page'>
             <Routes>
-              <Route exact path='/Rick-and-Morty' element={<Home />} />
+              <Route exact path='/rick-and-morty' element={<Home />} />
               <Route exact path='/' element={<Home />} />
-              <Route exact path='/character/:character' element={<Character />} />
+              <Route exact path='/rick-and-morty/character/:character' element={<Character />} />
               <Route exact path='/add' element={<AddForm />} />
               <Route exact path='*' element={<Navigate replace to="/404" />} />
             </Routes>
