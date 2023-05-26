@@ -97,8 +97,8 @@ nav ul li a:hover {
 }   
 
 .RaM-img {
-  width: auto;
-  height: 100%;
+  width: 100%;
+  height: auto;
   border-radius: 10px 0 0 10px;
   text-align: start;
 }
