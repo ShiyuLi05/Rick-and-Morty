@@ -58,6 +58,7 @@ nav ul li a:hover {
   background-image: url('../img/Hero.png');
   background-size: cover;
   background-position: center;
+  width: auto;
 }
 
 /* - - - - - - - - - - - - - - - - - - - - - - */
@@ -98,7 +99,7 @@ nav ul li a:hover {
 
 .RaM-img {
   width: 100%;
-  height: auto;
+  height: 100%;
   border-radius: 10px 0 0 10px;
   text-align: start;
 }
@@ -297,4 +298,37 @@ p.copyright {
   text-align: center;
   margin-top: 15px;
   cursor: default;
+}
+
+/* -------------------------------- */
+/* Responsive design                */
+/* -------------------------------- */
+@media (max-width:1200px) {
+  .result-container {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 750px) {
+  .result-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .RaM-img {
+    width: auto;
+    height: 100%;
+  }
+  .card {
+    height: 200px;
+  }
+}
+@media (max-width:550px) {
+  .result .flex {
+    display: block;
+  }
+  .buttons {
+    display: flex;
+    margin-top: 15px;
+  }
+  button {
+    width: 50%;
+  }
 }
