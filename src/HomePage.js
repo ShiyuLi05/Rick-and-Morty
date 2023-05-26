@@ -4,6 +4,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import Character from './pages/Character';
+import AddForm from './pages/AddForm';
 
 function HomePage() {
     return (
@@ -15,6 +16,7 @@ function HomePage() {
               <Route exact path='/' element={<Home />} />
               <Route exact path='/home' element={<Home />} />
               <Route exact path='/character/:character' element={<Character />} />
+              <Route exact path='/add' element={<AddForm />} />
               <Route exact path='*' element={<Navigate replace to="/404" />} />
             </Routes>
           </div>

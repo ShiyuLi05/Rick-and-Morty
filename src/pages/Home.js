@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-//import Button from '../components/Button';
+import { Link } from 'react-router-dom';
 
 function Home() {
 
@@ -58,13 +58,13 @@ function Home() {
 
   return (
     <>
-    <div class="RaMHero"></div>
+    <div className="RaMHero"></div>
     <div className='container result'>
       <div className='flex'>
         <h2>Characters</h2>
         <div className='buttons'>
-        {isSortedByName ? <button onClick={sortByName} className='sort'>Sort by Name</button> : <button onClick={sortById} className='sort Id'>Sort by ID</button>}
-        <button className='add'>New character</button>
+        {isSortedByName ? <button onClick={sortByName} className='sort'>Sort by Name</button> : <button onClick={sortById} className='sort'>Sort by <br/>ID</button>}
+        <button className='add'><Link to= '/add'>New Character</Link></button>
         </div>
       </div>
       <section className='characters result-container'>

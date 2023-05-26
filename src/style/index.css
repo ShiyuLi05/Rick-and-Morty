@@ -176,20 +176,87 @@ button {
   padding: 10px 10px;
   font-size: 1.6rem;
   border-radius: 10px;
-  border: 0;
+  border: none;
   background-color: #637894;
   cursor: pointer;
+  color: #fff;
 }
 h2 {
   line-height: 58px;
+  color: #fff;
+  font-size: 3.8rem;
+  letter-spacing: 0.6px;
+  font-family: 'Chokokutai', cursive;
 }
 button + button {
   margin-left: 15px;
 }
 .sort {
-  background-color: #5ff151;
+  background-color: #0085ff;
 }
-.Id {
-  position: relative;
-  transform: translateX(-100px,0);
+.sort:hover {
+  background-color: #006fff;
+}
+.add {
+  background-color: #e0ffff;
+}
+.add a {
+  text-decoration: none;
+  color: #000;
+}
+.add:hover {
+  background-color: #c7fafa;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - */
+/* 404                                         */
+/* - - - - - - - - - - - - - - - - - - - - - - */
+.not-found {
+  height: 100vh;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - */
+/* Form                                        */
+/* - - - - - - - - - - - - - - - - - - - - - - */
+.addForm {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 216px);
+}
+.addForm form {
+  height: 80%;
+}
+.addForm h2 {
+  margin-bottom: 30px;
+  font-size: 4rem;
+}
+.addForm input, .addForm select {
+  height: 45px;
+  width: 100%;
+  border: none;
+  background-color: rgba(60, 62, 69, 0.572);
+  color: #fff;
+  border-radius: 6px;
+  padding: 10px;
+  font-size: 1.6rem;
+}
+.addForm p {
+  height: 25px;
+  line-height: 25px;
+  font-size: 1.4rem;
+  color: #db5a6b;
+}
+.addForm select {
+  margin-bottom: 25px;
+}
+.addForm input[type=submit] {
+  background-color: #0085ff;
+  color: #fff;
+}
+.addForm input[type=submit]:hover {
+  background-color: #006fff;
+}
+.addForm input[type=submit]:disabled {
+  background-color: #69b4ff;
 }

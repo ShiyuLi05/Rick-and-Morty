@@ -5,7 +5,7 @@ function NotFound() {
   return (
     <div>
       <figure>
-        <img src={img} alt='404'/>
+        <img src={img} alt='404' className='not-found'/>
       </figure>
     </div>
   )
