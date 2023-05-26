@@ -84,9 +84,6 @@ function Home() {
                     <span className={isAlive(character.status) ? 'alive life' : 'life' }></span>
                     {character.status} - {character.species}
                   </li>
-                  <li>
-                    <div className='location'>Last known location</div> {character.location.name}
-                  </li>
                 </ul>
                 </div>
             </div>

@@ -5,7 +5,7 @@ body {
 }
 
 .container {
-  width: min(100% - 30px, 1200px);
+  width: min(100% - 40px, 1200px);
   margin-inline: auto;
 }
 
@@ -84,7 +84,7 @@ nav ul li a:hover {
   grid-template-columns: 0.36fr 0.64fr;
   grid-gap: 20px;
   width: 100%;
-  height: 210px;
+  height: 152px;
   border-radius: 10px;
   cursor: default;
   transition: 0.1s ease-in-out;
@@ -107,6 +107,7 @@ nav ul li a:hover {
   font-size: 2.4rem;
   font-family: 'Rubik', sans-serif;
   margin-top: 12px;
+  word-spacing: 0.6px;
 }
 .RaM-gender {
   color: #9e9e9e;
@@ -134,37 +135,6 @@ nav ul li a:hover {
   color: #fff;
   margin: 10px 0;
   list-style: none;
-}
-
-/* - - - - - - - - - - - - - - - - - - - - - - */
-/*  Footer                                     */
-/* - - - - - - - - - - - - - - - - - - - - - - */
-footer {
-  width: 100%;
-  height: 160px;
-  overflow: hidden;
-  border: none;
-  padding: 10px;
-  background-color: #424246;
-}
-.footer {
-  display: flex;
-  flex-direction: column;
-}
-.footerImg {
-  width: 100px;
-  height: 100px;
-  margin-inline: auto;
-  border: none;
-} 
-p.copyright {
-  font-size: 1.5rem;
-  color:  #adadad;
-  opacity: 0.4;
-  font-weight: 400; 
-  text-align: center;
-  margin-top: 15px;
-  cursor: default;
 }
 
 /* - - - - - - - - - - - - - - - - - - - - - - */
@@ -274,8 +244,10 @@ button + button {
   height: 50%;
   display: flex;
 }
-.character-details figure {
+.character-details figure img {
   margin-right: 50px;
+  border: none;
+  border-radius: 20px;
 }
 .character-details .detail {
   color: #fff;
@@ -293,4 +265,35 @@ button + button {
 }
 .character-details .detail p:last-child {
   margin-top: 10px;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - */
+/*  Footer                                     */
+/* - - - - - - - - - - - - - - - - - - - - - - */
+footer {
+  width: 100%;
+  height: 160px;
+  overflow: hidden;
+  border: none;
+  padding: 10px;
+  background-color: #424246;
+}
+.footer {
+  display: flex;
+  flex-direction: column;
+}
+.footerImg {
+  width: 100px;
+  height: 100px;
+  margin-inline: auto;
+  border: none;
+} 
+p.copyright {
+  font-size: 1.5rem;
+  color:  #adadad;
+  opacity: 0.4;
+  font-weight: 400; 
+  text-align: center;
+  margin-top: 15px;
+  cursor: default;
 }
