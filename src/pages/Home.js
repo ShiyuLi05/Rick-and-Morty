@@ -7,6 +7,7 @@ function Home() {
 
   const [characters, setCharacters] = useState([]);
   const [isSortedByName, setSortedByName] = useState(true);
+  //const [isAlive, setAlive] = useState(true);
 
   const navigate = useNavigate(); 
   
@@ -47,23 +48,52 @@ function Home() {
     setSortedByName(true);
   }
 
+  
+  const isAlive = (status) => {
+    if(status === 'Alive') {
+      return true;
+    } else return false;
+  }
+
 
   return (
-    <div className='container'>
-      <button>New character</button>
-      <section className='characters'>
-        {isSortedByName ? <button onClick={sortByName}>Sort by Name</button> : <button onClick={sortById}>Sort by ID</button>}
+    <>
+    <div class="RaMHero"></div>
+    <div className='container result'>
+      <div className='flex'>
+        <h2>Characters</h2>
+        <div className='buttons'>
+        {isSortedByName ? <button onClick={sortByName} className='sort'>Sort by Name</button> : <button onClick={sortById} className='sort Id'>Sort by ID</button>}
+        <button className='add'>New character</button>
+        </div>
+      </div>
+      <section className='characters result-container'>
       {characters.map(character => (
-            <div key={character.id} onClick={() => navigate(`character/${character.name}`)}>
-                <h2>{character.name}</h2>
-                <p>{character.id}</p>
+            <div key={character.id} onClick={() => navigate(`character/${character.id}`)} className='card'>
                 <figure>
-                    <img src={character.image} alt={character.name} />
+                    <img src={character.image} alt={character.name} className='RaM-img' />
                 </figure>
+                <div>              
+                <h3 className='RaM-name'>{character.name}</h3>
+                <p className='RaM-gender'>
+                  <span className='gender'>Gender: </span>
+                  <span>{character.gender}</span>
+                </p>
+                <ul>
+                  <li>
+                    <span className={isAlive(character.status) ? 'alive life' : 'life' }></span>
+                    {character.status} - {character.species}
+                  </li>
+                  <li>
+                    <div className='location'>Last known location</div> {character.location.name}
+                  </li>
+                </ul>
+                </div>
             </div>
         ))}
       </section>
     </div>
+    </>
   )
 }
 

@@ -1,26 +1,24 @@
-import { NavLink, Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import img from '../img/icon-w.png';
 
 function Header() {
   return (
     <header>
-    <div className='flex container'>
+    <div className='flex'>
     <div className='title'>
-        <h1>Rick and Morty</h1>
+        <figure><img src={img} alt="" className="RaMIcon" /></figure>
     </div>
     <nav>
         <ul>
         <li>
           <NavLink 
-           to ='/' 
-           className={navData => (navData.isActive ? 'active' : '')}>
+           to ='/' >
             Home
           </NavLink>
         </li>
         <li>
-          <NavLink 
-           to ='/about-us' 
-           className={navData => (navData.isActive ? 'active' : '')}>
-            About us
+          <NavLink to='*'>
+            Support us
           </NavLink>
         </li>
         </ul>
